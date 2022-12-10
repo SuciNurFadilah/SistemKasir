@@ -303,12 +303,14 @@ return [
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Data Produk',
+            'url'  => 'admin/produks',
+            'icon' => 'fas fa-fw fa-list',
+            'can'  => 'isAdmin',
         ],
         [
-            'text' => 'Data Barang',
-            'url'  => 'admin/barangs',
+            'text' => 'Data Penjualan',
+            'url'  => 'admin/penjualans',
             'icon' => 'fas fa-fw fa-list',
             'can'  => 'isAdmin',
         ],

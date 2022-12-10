@@ -25,6 +25,11 @@ Route::get('admin/home', [App\Http\Controllers\AdminController::class, 'index'])
     ->name('admin.home')
     ->middleware('is_admin');
 
-Route::get('admin/barangs', [App\Http\Controllers\AdminController::class, 'barangs'])
-    ->name('admin.barangs')
+Route::get('admin/produks', [App\Http\Controllers\AdminController::class, 'produks'])
+    ->name('admin.produks')
     ->middleware('is_admin');
+
+Route::get('admin/penjualans', [App\Http\Controllers\AdminController::class, 'penjualans'])
+    ->name('admin.penjualans')
+    ->middleware('is_admin');
+

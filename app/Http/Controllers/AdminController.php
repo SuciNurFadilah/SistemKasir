@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
-use App\Models\Barang;
+use App\Models\Produk;
+use App\Models\Transaksi;
+use App\Models\Penjualan;
 use App\Exports\BooksExport;
 use App\Imports\BooksImport;
 
@@ -29,11 +31,25 @@ class AdminController extends Controller
         return view('home', compact('user'));
     }
 
-    public function barangs()
+    public function produks()
     {
         $user = Auth::user();
-        $barangs = Barang::all();
-        return view('barang', compact('user','barangs'));
+        $produks = Produk::all();
+        return view('produk', compact('user','produks'));
+    }
+
+    public function transaksis()
+    {
+        $user = Auth::user();
+        $transaksis = Transaksi::all();
+        return view('transaksi', compact('user','transaksis'));
+    }
+
+    public function penjualans()
+    {
+        $user = Auth::user();
+        $penjualans = Penjualan::all();
+        return view('penjualan', compact('user','penjualans'));
     }
 
     public function submit_book(Request $req){
